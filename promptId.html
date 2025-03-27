@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captura de Dados</title>
+</head>
+<body>
+  <div>
+    <h3>Informações capturadas:</h3>
+    <div id="nome"></div>
+    <div id="idade"></div>
+    <div id="cidade"></div>
+    <div id="jogoFavorito"></div>
+  </div>
+
+  <script>
+    // Função para capturar os dados via prompt
+    function capturarDados() {
+      const nome = prompt("Qual seu nome?");
+      const idade = prompt("Quantos anos você tem?");
+      const cidade = prompt("De onde você é?");
+      const jogoFavorito = prompt("Qual o seu jogo favorito?");
+      
+      // Exibindo os dados nas divs
+      document.getElementById("nome").innerText = "Nome: " + nome;
+      document.getElementById("idade").innerText = "Idade: " + idade;
+      document.getElementById("cidade").innerText = "Cidade: " + cidade;
+      document.getElementById("jogoFavorito").innerText = "Jogo Favorito: " + jogoFavorito;
+    }
+
+    // Chama a função para capturar e exibir os dados
+    capturarDados();
+  </script>
+</body>
+</html>
