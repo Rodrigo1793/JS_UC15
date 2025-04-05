@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1> Calculadora </h1>
+    <script>
+        function validarNumero(numero){
+            return !isNaN(numero) && numero !=="";
+        }
+        let  num1 = prompt("Digite o primeiro numero:");
+        while (!validarNumero(num1)){
+            num1 = prompt("Por favor, digite um número válido para o primeiro número:");
+        }
+        num1 = parseFloat(num1);
+        let num2 = prompt("Digite o segundo numero");
+        while (!validarNumero(num2)){
+            num2 = prompt("Por favaor, digite um númeor válido para o segundo número:");
+        }
+        num2 = parseFloat(num2);
+        let operacao = prompt("Escolhar operação (+,-,*,/): ");
+        while (!['+','-','*','/'].includes(operacao)){
+            operacao = prompt("Operação inválida.Escolha um operação válida(+,):")
+        }
+        let resultado;
+        switch(operacao){
+            case '+': resulatdo = num1 + num2;
+            break;
+            case '-': resultado = num1 - num2;
+            break;
+            case '*': resultado = num1 * num2;
+            break;
+            case '/': if (num2 !==0){
+                resultado =num1 /num2
+                }else{
+                    resultado = "Erro de divisão por zero!";
+                }
+                break;
+            }
+            alert ("O resultado da operação é: " + resultado);
+            document.getElementById("resultado").innerHTML = "Resulatdo"+ resultado;
+    </script>
+    <div id="resultado"></div>
+</body>
+</html>
